@@ -95,3 +95,8 @@
    (#offset! @injection.content 0 2 0 -2))
   (#set! injection.language "angular"))
 
+(element
+  ((text) @injection.content
+   (#lua-match? @injection.content "%@for%(.*%)"))
+  (#set! injection.language "angular"))
+
